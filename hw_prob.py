@@ -1,7 +1,7 @@
 def main():
   process_array = []
   extinct_runs = 0
-  For i in range (0,100): #100 runs
+  for i in range(0,100): #100 runs
     new_process = birth_death_process()
     process_array.append( new_process  )
     if new_process[1][-1] == 0:
