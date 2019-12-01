@@ -1,15 +1,15 @@
 def main():
-process_array = []
-extinct_runs = 0
-For i in range (0,100): #100 runs
-  new_process = birth_death_process()
-  process_array.append( new_process  )
-  if new_process[1][-1] == 0:
-    extinct_runs += 1
-print( extinct_runs, "out of 100 runs went extinct" )
+  process_array = []
+  extinct_runs = 0
+  For i in range (0,100): #100 runs
+    new_process = birth_death_process()
+    process_array.append( new_process  )
+    if new_process[1][-1] == 0:
+      extinct_runs += 1
+  print( extinct_runs, "out of 100 runs went extinct" )
 
-#TO ADD:
-#PLOT FIRST FIVE RUNS IN ARRAY
+  #TO ADD:
+  #PLOT FIRST FIVE RUNS IN ARRAY
 
 def birth_death_process():
   birth_rate = 1
@@ -34,4 +34,4 @@ def birth_death_process():
       if process[1][-1] == 0:
         process[0].append( end_time )
         process[1].append( process[1][-1] )
-return process
+  return process
